@@ -113,15 +113,6 @@ int main(void) {
             for(int k = 0; k <= i; ++k) {
                 scanf("%s", bd[i][j][k]);
                 if(j == i || k == i) {
-                    // int r, c;
-                    // int ret = find(ht, bd[i][j][k], &r, &c);
-                    // if(ret == -1) {
-                    //     insert(ht, bd[i][j][k], j, k);
-                    // } else {
-                    //     fr = r; fc = c;
-                    //     sr = j; sc = k;
-                    //     delete(ht, bd[i][j][k], ret);
-                    // }
                     try_insert(
                         ht, bd[i][j][k], j, k, &fr, &fc, &sr, &sc);
                     top[j][k] = i;
