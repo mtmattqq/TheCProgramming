@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 int hasEOF = 0;
 
 int readchar() {
@@ -26,14 +27,47 @@ int ReadInt(int *x) {
     return 1;
 }
 
+int get(unsigned long long s, int n) {
+    return (s & (255ULL << (n << 3))) >> (n << 3);
+}
+
 int main() {
     int x;
+    unsigned long long book_shelf = 0;
     while (ReadInt(&x)) {
-        // add your code
+
+#ifdef DEBUG
+        printf("x = %d\n", x);
+#endif
+
+        bool isf = false;
+        int idx = 0;
+        for(int i = 7; i >= 0; --i) {
+            if(get(book_shelf, i) == x) {
+                isf = true;
+                idx = i;
+                break;
+            }
+        }
+
+        if(!isf) {
+            book_shelf <<= 8;
+            book_shelf += x;
+        } else {
+            ;
+        }
+
+#ifdef DEBUG
+        for(int i = 7; i >= 0; --i) {
+            printf("%d ", get(book_shelf, i));
+        }
+        printf("\n");
+#endif
+
     }    
     
-    for(int i = 8; i >= 0; --i) {
-        printf("%d");
+    for(int i = 7; i >= 0; --i) {
+        printf("%d ", get(book_shelf, i));
     }
     return 0;
 }
