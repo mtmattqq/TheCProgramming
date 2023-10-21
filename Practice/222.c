@@ -34,6 +34,7 @@ int get(unsigned long long s, int n) {
 int main() {
     int x;
     unsigned long long book_shelf = 0;
+    unsigned long long pre, nex, tp;
     while (ReadInt(&x)) {
 
 #ifdef DEBUG
@@ -54,7 +55,37 @@ int main() {
             book_shelf <<= 8;
             book_shelf += x;
         } else {
-            ;
+            tp = get(book_shelf, idx);
+
+#ifdef DEBUG
+            printf("find x in %d, which is %d\n", idx, tp);
+#endif
+
+            if(idx == 7) {
+                pre = 0ULL;
+            } else {
+                pre = book_shelf >> ((idx + 1ULL) << 3ULL);
+            }
+            
+#ifdef DEBUG
+            printf("The element in pre : \n");
+            for(int i = 7; i >= 0; --i) {
+                printf("%d ", get(pre, i));
+            }
+            printf("end\n");
+#endif
+
+            nex = book_shelf & ((1ULL << (idx << 3ULL)) - 1ULL);
+
+#ifdef DEBUG
+            printf("The element in nex : \n");
+            for(int i = 7; i >= 0; --i) {
+                printf("%d ", get(nex, i));
+            }
+            printf("end\n");
+#endif
+
+            book_shelf = (pre << ((idx + 1ULL) << 3ULL)) + (nex << 8ULL) + tp;
         }
 
 #ifdef DEBUG
