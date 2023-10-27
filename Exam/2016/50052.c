@@ -36,24 +36,9 @@ void seperate_group(
             }
         }
 
-#ifdef DEBUG
-        printf("Dis of \"%s\" and \"%s\" is %d\n", info[i], info[mn_idx], mn);
-#endif
-
         strcpy(group[mn_idx][group_idx[mn_idx]], info[i]);
         group_idx[mn_idx]++;
     }
-
-#ifdef DEBUG
-    for(int i = 0; i < 3; ++i) {
-        printf("Group %d\n", i);
-        for(int j = 0; j < group_idx[i]; ++j) {
-            printf("%s\n", group[i][j]);
-        }
-        printf("\n");
-    }
-#endif  
-
 }
 
 void find_mean_value(
@@ -74,17 +59,6 @@ void find_mean_value(
         }
         mean[i][l] = '\0';
     }
-
-#ifdef DEBUG
-    for(int i = 0; i < 3; ++i) {
-        printf("Mean Value %d is (", i);
-        for(int j = 0; j < l; ++j) {
-            printf("%d%c", mean[i][j], ",)"[j == l - 1]);
-        }
-        printf("\n");
-    }
-#endif 
-
 }
 
 void assign_leader(
@@ -92,7 +66,6 @@ void assign_leader(
     char group[3][N][LEN], int group_idx[3],
     char mean[3][LEN]
 ) {
-    // assign the leader
     for(int i = 0; i < 3; ++i) {
         int mn = INT_MAX, mn_idx = 0;
         for(int j = 0; j < group_idx[i]; ++j) {
@@ -121,7 +94,6 @@ void fill_back(char info[N][LEN], char group[3][N][LEN], int group_idx[3]) {
 }
 
 void simulate_round(int n, int l, char info[N][LEN]) {
-    // seperating groups
     char group[3][N][LEN] = {0};
     int group_idx[3] = {0};
 
@@ -135,13 +107,6 @@ void simulate_round(int n, int l, char info[N][LEN]) {
     assign_leader(l, group, group_idx, mean);
 
     fill_back(info, group, group_idx);
-
-#ifdef DEBUG
-    for(int i = 0; i < 3; ++i) {
-        printf("New leader %d is \"%s\"\n", i, info[i]);
-    }
-#endif
-
 }
 
 int main(void) {
@@ -152,12 +117,6 @@ int main(void) {
     for(int i = 0; i < n; ++i) {
         scanf("%s", info[i]);
     }
-
-#ifdef DEBUG
-    for(int i = 0; i < n; ++i) {
-        printf("The %d's string is \"%s\"\n", i, info[i]);
-    }
-#endif
 
     for(int i = 0; i < r; ++i) {
         simulate_round(n, l, info);
