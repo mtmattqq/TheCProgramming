@@ -31,17 +31,8 @@ int main(void) {
         strcpy(var[var_idx], input);
         scanf("%s", input);
         scanf("%d", &(var_val[var_idx]));
-
-#ifdef DEBUG
-        printf("Var %d = %d\n",  var_idx, var_val[var_idx]);
-#endif
-
         var_idx++;
     }
-
-#ifdef DEBUG
-    printf("Varables readed successfully\n");
-#endif
 
     int line_num = 1;
     while(scanf("%s", input) != EOF) {
@@ -97,14 +88,6 @@ int main(void) {
             scanf("%s", input);
             code[line_num][4] = find_var_idx(var, var_idx, input);
         }
-
-#ifdef DEBUG
-        printf("Line %2d : ", line_num);
-        for(int i = 0; i < 5; ++i) {
-            printf("%d ", code[line_num][i]);
-        }
-        printf("\n");
-#endif
 
         line_num++;
     }
