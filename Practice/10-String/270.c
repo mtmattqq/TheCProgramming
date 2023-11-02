@@ -33,7 +33,7 @@ int mul(int a, int b) {
     return a * b;
 }
 
-int div(int a, int b) {
+int d(int a, int b) {
     return a / b;
 }
 
@@ -64,23 +64,10 @@ void read_if(
     code[line_num][1] = find_var_idx(var, var_idx, input);
     scanf("%s", input);
 
-    const static char ops[6][MAX_VAR_LEN] = {
+    static char ops[MAX_VAR_NUM][MAX_VAR_LEN] = {
         "==", "!=", ">", "<", ">=", "<="
     };
     code[line_num][2] = find_var_idx(ops, 6, input);
-    // if(strcmp(input, "==") == 0) {
-    //     code[line_num][2] = EQUAL;
-    // } else if(strcmp(input, "!=") == 0) {
-    //     code[line_num][2] = NOT_EQL;
-    // } else if(strcmp(input, ">") == 0) {
-    //     code[line_num][2] = GREATER;
-    // } else if(strcmp(input, "<") == 0) {
-    //     code[line_num][2] = LESS;
-    // } else if(strcmp(input, ">=") == 0) {
-    //     code[line_num][2] = GRE_EQL;
-    // } else { // "<="
-    //     code[line_num][2] = LES_EQL;
-    // }
     scanf("%s", input);
     code[line_num][3] = find_var_idx(var, var_idx, input);
     scanf("%s", input);
@@ -122,17 +109,12 @@ void read_ari(
     scanf("%s", input);
     code[line_num][2] = find_var_idx(var, var_idx, input);
     scanf("%s", input);
-    if(strcmp(input, "+") == 0) {
-        code[line_num][3] = ADD;
-    } else if(strcmp(input, "-") == 0) {
-        code[line_num][3] = SUB;
-    } else if(strcmp(input, "*") == 0) {
-        code[line_num][3] = MUL;
-    } else if(strcmp(input, "/") == 0) {
-        code[line_num][3] = DIV;
-    } else { // "%"
-        code[line_num][3] = MOD;
-    }
+
+    static char ops[MAX_VAR_NUM][MAX_VAR_LEN] = {
+        "+", "-", "*", "/", "%"
+    };
+
+    code[line_num][3] = find_var_idx(ops, 5, input);
     scanf("%s", input);
     code[line_num][4] = find_var_idx(var, var_idx, input);
 }
@@ -158,62 +140,15 @@ int main(void) {
         char input[MAX_LINE_LENGTH],
         char var[MAX_VAR_NUM][MAX_VAR_LEN],
         int var_idx
-    ) = {&read_goto, &read_if, &read_print};
+    ) = {&read_goto, &read_if, &read_print, &read_stop, &read_ari};
+
+    char ops[MAX_VAR_NUM][MAX_VAR_LEN] = {
+        "GOTO", "IF", "PRINT", "STOP"
+    };
 
     while(scanf("%s", input) != EOF) {
-        // if(strcmp(input, "GOTO") == 0) {
-        //     code[line_num][0] = GOTO;
-        //     scanf("%d", &(code[line_num][1]));
-        // } else if(strcmp(input, "IF") == 0) {
-        //     code[line_num][0] = IF;
-        //     scanf("%s", input);
-        //     code[line_num][1] = find_var_idx(var, var_idx, input);
-        //     scanf("%s", input);
-        //     if(strcmp(input, "==") == 0) {
-        //         code[line_num][2] = EQUAL;
-        //     } else if(strcmp(input, "!=") == 0) {
-        //         code[line_num][2] = NOT_EQL;
-        //     } else if(strcmp(input, ">") == 0) {
-        //         code[line_num][2] = GREATER;
-        //     } else if(strcmp(input, "<") == 0) {
-        //         code[line_num][2] = LESS;
-        //     } else if(strcmp(input, ">=") == 0) {
-        //         code[line_num][2] = GRE_EQL;
-        //     } else { // "<="
-        //         code[line_num][2] = LES_EQL;
-        //     }
-        //     scanf("%s", input);
-        //     code[line_num][3] = find_var_idx(var, var_idx, input);
-        //     scanf("%s", input);
-        //     scanf("%d", &(code[line_num][4]));
-        // } else if(strcmp(input, "PRINT") == 0) {
-        //     code[line_num][0] = PRINT;
-        //     scanf("%s", input);
-        //     code[line_num][1] = find_var_idx(var, var_idx, input);
-        // } else if(strcmp(input, "STOP") == 0) {
-        //     code[line_num][0] = STOP;
-        // } else { // ARI
-        //     code[line_num][0] = ARI;
-        //     code[line_num][1] = find_var_idx(var, var_idx, input);
-        //     scanf("%s", input);
-        //     scanf("%s", input);
-        //     code[line_num][2] = find_var_idx(var, var_idx, input);
-        //     scanf("%s", input);
-        //     if(strcmp(input, "+") == 0) {
-        //         code[line_num][3] = ADD;
-        //     } else if(strcmp(input, "-") == 0) {
-        //         code[line_num][3] = SUB;
-        //     } else if(strcmp(input, "*") == 0) {
-        //         code[line_num][3] = MUL;
-        //     } else if(strcmp(input, "/") == 0) {
-        //         code[line_num][3] = DIV;
-        //     } else { // "%"
-        //         code[line_num][3] = MOD;
-        //     }
-        //     scanf("%s", input);
-        //     code[line_num][4] = find_var_idx(var, var_idx, input);
-        // }
-
+        int a = find_var_idx(ops, 4, input);
+        operations[a](code, line_num, input, var, var_idx);
         line_num++;
     }
 
@@ -231,22 +166,14 @@ int main(void) {
         } else if(code[cur_line][0] == IF) {
             int var1 = var_val[code[cur_line][1]];
             int var2 = var_val[code[cur_line][3]];
-            if(code[cur_line][2] == EQUAL && var1 == var2) {
-                cur_line = code[cur_line][4];
-                continue;
-            } else if(code[cur_line][2] == NOT_EQL && var1 != var2) {
-                cur_line = code[cur_line][4];
-                continue;
-            } else if(code[cur_line][2] == GREATER && var1 > var2) {
-                cur_line = code[cur_line][4];
-                continue;
-            } else if(code[cur_line][2] == LESS && var1 < var2) {
-                cur_line = code[cur_line][4];
-                continue;
-            } else if(code[cur_line][2] == GRE_EQL && var1 >= var2) {
-                cur_line = code[cur_line][4];
-                continue;
-            } else if(code[cur_line][2] == LES_EQL && var1 <= var2) {
+            if(
+                (code[cur_line][2] == EQUAL && var1 == var2) || 
+                (code[cur_line][2] == NOT_EQL && var1 != var2) ||
+                (code[cur_line][2] == GREATER && var1 > var2) ||
+                (code[cur_line][2] == LESS && var1 < var2) ||
+                (code[cur_line][2] == GRE_EQL && var1 >= var2) ||
+                (code[cur_line][2] == LES_EQL && var1 <= var2)
+            ) {
                 cur_line = code[cur_line][4];
                 continue;
             }
@@ -255,17 +182,8 @@ int main(void) {
         } else if(code[cur_line][0] == ARI) {
             int var2 = var_val[code[cur_line][2]];
             int var3 = var_val[code[cur_line][4]];
-            if(code[cur_line][3] == ADD) {
-                var_val[code[cur_line][1]] = var2 + var3;
-            } else if(code[cur_line][3] == SUB) {
-                var_val[code[cur_line][1]] = var2 - var3;
-            } else if(code[cur_line][3] == MUL) {
-                var_val[code[cur_line][1]] = var2 * var3;
-            } else if(code[cur_line][3] == DIV) {
-                var_val[code[cur_line][1]] = var2 / var3;
-            } else if(code[cur_line][3] == MOD) {
-                var_val[code[cur_line][1]] = var2 % var3;
-            } 
+            int (*ff[5])(int a, int b) = {&add, &sub, &mul, &d, &mod};
+            var_val[code[cur_line][1]] = ff[code[cur_line][3]](var2, var3);
         }
         cur_line++;
     }
