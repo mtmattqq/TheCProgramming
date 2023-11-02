@@ -18,6 +18,123 @@ int find_var_idx(char var[MAX_VAR_NUM][MAX_VAR_LEN], int var_idx, char tar[]) {
             return i;
         }
     }
+    return var_idx;
+}
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int sub(int a, int b) {
+    return a - b;
+}
+
+int mul(int a, int b) {
+    return a * b;
+}
+
+int div(int a, int b) {
+    return a / b;
+}
+
+int mod(int a, int b) {
+    return a % b;
+}
+
+void read_goto(
+    int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+    int line_num,
+    char input[MAX_LINE_LENGTH],
+    char var[MAX_VAR_NUM][MAX_VAR_LEN],
+    int var_idx
+) {
+    code[line_num][0] = GOTO;
+    scanf("%d", &(code[line_num][1]));
+}
+
+void read_if(
+    int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+    int line_num,
+    char input[MAX_LINE_LENGTH],
+    char var[MAX_VAR_NUM][MAX_VAR_LEN],
+    int var_idx
+) {
+    code[line_num][0] = IF;
+    scanf("%s", input);
+    code[line_num][1] = find_var_idx(var, var_idx, input);
+    scanf("%s", input);
+
+    const static char ops[6][MAX_VAR_LEN] = {
+        "==", "!=", ">", "<", ">=", "<="
+    };
+    code[line_num][2] = find_var_idx(ops, 6, input);
+    // if(strcmp(input, "==") == 0) {
+    //     code[line_num][2] = EQUAL;
+    // } else if(strcmp(input, "!=") == 0) {
+    //     code[line_num][2] = NOT_EQL;
+    // } else if(strcmp(input, ">") == 0) {
+    //     code[line_num][2] = GREATER;
+    // } else if(strcmp(input, "<") == 0) {
+    //     code[line_num][2] = LESS;
+    // } else if(strcmp(input, ">=") == 0) {
+    //     code[line_num][2] = GRE_EQL;
+    // } else { // "<="
+    //     code[line_num][2] = LES_EQL;
+    // }
+    scanf("%s", input);
+    code[line_num][3] = find_var_idx(var, var_idx, input);
+    scanf("%s", input);
+    scanf("%d", &(code[line_num][4]));
+}
+
+void read_print(
+    int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+    int line_num,
+    char input[MAX_LINE_LENGTH],
+    char var[MAX_VAR_NUM][MAX_VAR_LEN],
+    int var_idx
+) {
+    code[line_num][0] = PRINT;
+    scanf("%s", input);
+    code[line_num][1] = find_var_idx(var, var_idx, input);
+}
+
+void read_stop(
+    int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+    int line_num,
+    char input[MAX_LINE_LENGTH],
+    char var[MAX_VAR_NUM][MAX_VAR_LEN],
+    int var_idx
+) {
+    code[line_num][0] = STOP;
+}
+
+void read_ari(
+    int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+    int line_num,
+    char input[MAX_LINE_LENGTH],
+    char var[MAX_VAR_NUM][MAX_VAR_LEN],
+    int var_idx
+) {
+    code[line_num][0] = ARI;
+    code[line_num][1] = find_var_idx(var, var_idx, input);
+    scanf("%s", input);
+    scanf("%s", input);
+    code[line_num][2] = find_var_idx(var, var_idx, input);
+    scanf("%s", input);
+    if(strcmp(input, "+") == 0) {
+        code[line_num][3] = ADD;
+    } else if(strcmp(input, "-") == 0) {
+        code[line_num][3] = SUB;
+    } else if(strcmp(input, "*") == 0) {
+        code[line_num][3] = MUL;
+    } else if(strcmp(input, "/") == 0) {
+        code[line_num][3] = DIV;
+    } else { // "%"
+        code[line_num][3] = MOD;
+    }
+    scanf("%s", input);
+    code[line_num][4] = find_var_idx(var, var_idx, input);
 }
 
 int main(void) {
@@ -35,59 +152,67 @@ int main(void) {
     }
 
     int line_num = 1;
+    void (*operations[6]) (
+        int code[MAX_LINE_LENGTH][MAX_LINE_LENGTH], 
+        int line_num,
+        char input[MAX_LINE_LENGTH],
+        char var[MAX_VAR_NUM][MAX_VAR_LEN],
+        int var_idx
+    ) = {&read_goto, &read_if, &read_print};
+
     while(scanf("%s", input) != EOF) {
-        if(strcmp(input, "GOTO") == 0) {
-            code[line_num][0] = GOTO;
-            scanf("%d", &(code[line_num][1]));
-        } else if(strcmp(input, "IF") == 0) {
-            code[line_num][0] = IF;
-            scanf("%s", input);
-            code[line_num][1] = find_var_idx(var, var_idx, input);
-            scanf("%s", input);
-            if(strcmp(input, "==") == 0) {
-                code[line_num][2] = EQUAL;
-            } else if(strcmp(input, "!=") == 0) {
-                code[line_num][2] = NOT_EQL;
-            } else if(strcmp(input, ">") == 0) {
-                code[line_num][2] = GREATER;
-            } else if(strcmp(input, "<") == 0) {
-                code[line_num][2] = LESS;
-            } else if(strcmp(input, ">=") == 0) {
-                code[line_num][2] = GRE_EQL;
-            } else { // "<="
-                code[line_num][2] = LES_EQL;
-            }
-            scanf("%s", input);
-            code[line_num][3] = find_var_idx(var, var_idx, input);
-            scanf("%s", input);
-            scanf("%d", &(code[line_num][4]));
-        } else if(strcmp(input, "PRINT") == 0) {
-            code[line_num][0] = PRINT;
-            scanf("%s", input);
-            code[line_num][1] = find_var_idx(var, var_idx, input);
-        } else if(strcmp(input, "STOP") == 0) {
-            code[line_num][0] = STOP;
-        } else { // ARI
-            code[line_num][0] = ARI;
-            code[line_num][1] = find_var_idx(var, var_idx, input);
-            scanf("%s", input);
-            scanf("%s", input);
-            code[line_num][2] = find_var_idx(var, var_idx, input);
-            scanf("%s", input);
-            if(strcmp(input, "+") == 0) {
-                code[line_num][3] = ADD;
-            } else if(strcmp(input, "-") == 0) {
-                code[line_num][3] = SUB;
-            } else if(strcmp(input, "*") == 0) {
-                code[line_num][3] = MUL;
-            } else if(strcmp(input, "/") == 0) {
-                code[line_num][3] = DIV;
-            } else { // "%"
-                code[line_num][3] = MOD;
-            }
-            scanf("%s", input);
-            code[line_num][4] = find_var_idx(var, var_idx, input);
-        }
+        // if(strcmp(input, "GOTO") == 0) {
+        //     code[line_num][0] = GOTO;
+        //     scanf("%d", &(code[line_num][1]));
+        // } else if(strcmp(input, "IF") == 0) {
+        //     code[line_num][0] = IF;
+        //     scanf("%s", input);
+        //     code[line_num][1] = find_var_idx(var, var_idx, input);
+        //     scanf("%s", input);
+        //     if(strcmp(input, "==") == 0) {
+        //         code[line_num][2] = EQUAL;
+        //     } else if(strcmp(input, "!=") == 0) {
+        //         code[line_num][2] = NOT_EQL;
+        //     } else if(strcmp(input, ">") == 0) {
+        //         code[line_num][2] = GREATER;
+        //     } else if(strcmp(input, "<") == 0) {
+        //         code[line_num][2] = LESS;
+        //     } else if(strcmp(input, ">=") == 0) {
+        //         code[line_num][2] = GRE_EQL;
+        //     } else { // "<="
+        //         code[line_num][2] = LES_EQL;
+        //     }
+        //     scanf("%s", input);
+        //     code[line_num][3] = find_var_idx(var, var_idx, input);
+        //     scanf("%s", input);
+        //     scanf("%d", &(code[line_num][4]));
+        // } else if(strcmp(input, "PRINT") == 0) {
+        //     code[line_num][0] = PRINT;
+        //     scanf("%s", input);
+        //     code[line_num][1] = find_var_idx(var, var_idx, input);
+        // } else if(strcmp(input, "STOP") == 0) {
+        //     code[line_num][0] = STOP;
+        // } else { // ARI
+        //     code[line_num][0] = ARI;
+        //     code[line_num][1] = find_var_idx(var, var_idx, input);
+        //     scanf("%s", input);
+        //     scanf("%s", input);
+        //     code[line_num][2] = find_var_idx(var, var_idx, input);
+        //     scanf("%s", input);
+        //     if(strcmp(input, "+") == 0) {
+        //         code[line_num][3] = ADD;
+        //     } else if(strcmp(input, "-") == 0) {
+        //         code[line_num][3] = SUB;
+        //     } else if(strcmp(input, "*") == 0) {
+        //         code[line_num][3] = MUL;
+        //     } else if(strcmp(input, "/") == 0) {
+        //         code[line_num][3] = DIV;
+        //     } else { // "%"
+        //         code[line_num][3] = MOD;
+        //     }
+        //     scanf("%s", input);
+        //     code[line_num][4] = find_var_idx(var, var_idx, input);
+        // }
 
         line_num++;
     }
