@@ -1,6 +1,15 @@
 {
     "files.associations": {
         "stdlib.h": "c",
-        "238.C": "cpp"
+        "238.C": "cpp",
+        "array": "c",
+        "memory": "c",
+        "functional": "c",
+        "tuple": "c",
+        "utility": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "string_view": "c"
     }
 }

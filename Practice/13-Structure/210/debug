@@ -1,0 +1,356 @@
+MARTIN MARY 2TNC5C73D8 30000 58
+JACKSON BARBARA NJGBA4QJ24 0 7
+MARTIN PATRICIA RF6P85XWT2 0 31
+DAVIS LINDA 71CLG2BFBG 60000 37
+JACKSON PATRICIA 6O1P3UXJ0F 20000 51
+GARCIA BARBARA 0HTRDWRPRR 70000 43
+ANDERSON ELIZABETH MXVW2T75IC 10000 29
+BROWN LINDA SQK4LNJZOB 60000 18
+HARRIS ELIZABETH O7YO4OWN4N 40000 41
+ANDERSON MARIA POWTSR733F 100000 21
+MARTINEZ MARY X9Y0308RZM 40000 2
+DAVIS JENNIFER Q3TPFNMI37 80000 25
+MARTINEZ MARIA 8SHD6ZAHY1 40000 21
+DAVIS JENNIFER 3XV55GJR8M 30000 72
+ROBINSON JENNIFER 75ZRN9EXOH 40000 1
+JACKSON JENNIFER TW1B6DHK3F 100000 72
+MARTIN JENNIFER 0E47823JYM 80000 35
+TAYLOR MARIA QOY2VH81KP 30000 70
+TAYLOR MARY NU9HGQERV3 90000 60
+WILSON MARGARET GOU43YQRNP 50000 26
+HARRIS MARGARET S1DTIEQFFO 20000 73
+JOHNSON LINDA AQ8RRXOTBS 70000 36
+MARTINEZ JENNIFER XW6YMIW994 10000 51
+BROWN BARBARA 7DVXDTPL1Q 50000 65
+JACKSON DOROTHY 873Z02THEP 90000 64
+ANDERSON LINDA G2FQGKULCK 100000 26
+TAYLOR MARGARET BWLXA40E2E 70000 15
+WILSON BARBARA NX3G76F8EG 20000 49
+WILSON ELIZABETH OQM503HKEQ 70000 53
+MARTINEZ PATRICIA C9K11HFNG3 90000 34
+DAVIS DOROTHY ULIV5ZCQIB 40000 13
+MARTINEZ MARY HG6IM0U7R3 60000 14
+MOORE BARBARA FI9QW61V68 90000 26
+JACKSON DOROTHY IO9WC4RAR9 100000 63
+JACKSON DOROTHY PNM8ENEFTC 100000 31
+WILSON MARIA I4VNFLDTZ1 60000 9
+MOORE ELIZABETH 8YH4G4Y1P6 60000 65
+THOMPSON MARY TFHUB7M20W 70000 13
+JOHNSON MARIA KO81MN4VOR 40000 34
+THOMAS MARY POTKZV59OC 30000 60
+ANDERSON ELIZABETH 343T1HG8RV 10000 67
+MOORE ELIZABETH YX63I8DZ4B 20000 45
+SMITH SUSAN 486CDDS0SW 80000 56
+THOMPSON MARY J9R5ESNO1I 90000 75
+JACKSON BARBARA 6XZTX3I90U 60000 26
+THOMPSON DOROTHY 2RHYI8A1C5 50000 37
+JOHNSON DOROTHY L3X6FNQD8P 10000 16
+BROWN DOROTHY R4W8FROHKQ 70000 68
+WHITE LINDA R2OTXJIRBY 20000 18
+JONES ELIZABETH LW0WTP2Z6X 0 7
+m = 5
+salary lastname salary lastname lastname lastname firstname != LINDA 
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 0
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 1
+is_num = 0 find = 1 PATRICIA comp to LINDA 
+Successfully deal with didx = 2
+is_num = 0 find = 1 LINDA comp to LINDA 
+Successfully deal with didx = 3
+is_num = 0 find = 1 PATRICIA comp to LINDA 
+Successfully deal with didx = 4
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 5
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 6
+is_num = 0 find = 1 LINDA comp to LINDA 
+Successfully deal with didx = 7
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 8
+is_num = 0 find = 1 MARIA comp to LINDA 
+Successfully deal with didx = 9
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 10
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 11
+is_num = 0 find = 1 MARIA comp to LINDA 
+Successfully deal with didx = 12
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 13
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 14
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 15
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 16
+is_num = 0 find = 1 MARIA comp to LINDA 
+Successfully deal with didx = 17
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 18
+is_num = 0 find = 1 MARGARET comp to LINDA 
+Successfully deal with didx = 19
+is_num = 0 find = 1 MARGARET comp to LINDA 
+Successfully deal with didx = 20
+is_num = 0 find = 1 LINDA comp to LINDA 
+Successfully deal with didx = 21
+is_num = 0 find = 1 JENNIFER comp to LINDA 
+Successfully deal with didx = 22
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 23
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 24
+is_num = 0 find = 1 LINDA comp to LINDA 
+Successfully deal with didx = 25
+is_num = 0 find = 1 MARGARET comp to LINDA 
+Successfully deal with didx = 26
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 27
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 28
+is_num = 0 find = 1 PATRICIA comp to LINDA 
+Successfully deal with didx = 29
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 30
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 31
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 32
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 33
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 34
+is_num = 0 find = 1 MARIA comp to LINDA 
+Successfully deal with didx = 35
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 36
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 37
+is_num = 0 find = 1 MARIA comp to LINDA 
+Successfully deal with didx = 38
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 39
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 40
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 41
+is_num = 0 find = 1 SUSAN comp to LINDA 
+Successfully deal with didx = 42
+is_num = 0 find = 1 MARY comp to LINDA 
+Successfully deal with didx = 43
+is_num = 0 find = 1 BARBARA comp to LINDA 
+Successfully deal with didx = 44
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 45
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 46
+is_num = 0 find = 1 DOROTHY comp to LINDA 
+Successfully deal with didx = 47
+is_num = 0 find = 1 LINDA comp to LINDA 
+Successfully deal with didx = 48
+is_num = 0 find = 1 ELIZABETH comp to LINDA 
+Successfully deal with didx = 49
+ID age lastname firstname salary ID lastname != BROWN 
+is_num = 0 find = 1 MARTIN comp to BROWN 
+Successfully deal with didx = 0
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 1
+is_num = 0 find = 1 MARTIN comp to BROWN 
+Successfully deal with didx = 2
+is_num = 0 find = 1 DAVIS comp to BROWN 
+Successfully deal with didx = 3
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 4
+is_num = 0 find = 1 GARCIA comp to BROWN 
+Successfully deal with didx = 5
+is_num = 0 find = 1 ANDERSON comp to BROWN 
+Successfully deal with didx = 6
+is_num = 0 find = 1 BROWN comp to BROWN 
+Successfully deal with didx = 7
+is_num = 0 find = 1 HARRIS comp to BROWN 
+Successfully deal with didx = 8
+is_num = 0 find = 1 ANDERSON comp to BROWN 
+Successfully deal with didx = 9
+is_num = 0 find = 1 MARTINEZ comp to BROWN 
+Successfully deal with didx = 10
+is_num = 0 find = 1 DAVIS comp to BROWN 
+Successfully deal with didx = 11
+is_num = 0 find = 1 MARTINEZ comp to BROWN 
+Successfully deal with didx = 12
+is_num = 0 find = 1 DAVIS comp to BROWN 
+Successfully deal with didx = 13
+is_num = 0 find = 1 ROBINSON comp to BROWN 
+Successfully deal with didx = 14
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 15
+is_num = 0 find = 1 MARTIN comp to BROWN 
+Successfully deal with didx = 16
+is_num = 0 find = 1 TAYLOR comp to BROWN 
+Successfully deal with didx = 17
+is_num = 0 find = 1 TAYLOR comp to BROWN 
+Successfully deal with didx = 18
+is_num = 0 find = 1 WILSON comp to BROWN 
+Successfully deal with didx = 19
+is_num = 0 find = 1 HARRIS comp to BROWN 
+Successfully deal with didx = 20
+is_num = 0 find = 1 JOHNSON comp to BROWN 
+Successfully deal with didx = 21
+is_num = 0 find = 1 MARTINEZ comp to BROWN 
+Successfully deal with didx = 22
+is_num = 0 find = 1 BROWN comp to BROWN 
+Successfully deal with didx = 23
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 24
+is_num = 0 find = 1 ANDERSON comp to BROWN 
+Successfully deal with didx = 25
+is_num = 0 find = 1 TAYLOR comp to BROWN 
+Successfully deal with didx = 26
+is_num = 0 find = 1 WILSON comp to BROWN 
+Successfully deal with didx = 27
+is_num = 0 find = 1 WILSON comp to BROWN 
+Successfully deal with didx = 28
+is_num = 0 find = 1 MARTINEZ comp to BROWN 
+Successfully deal with didx = 29
+is_num = 0 find = 1 DAVIS comp to BROWN 
+Successfully deal with didx = 30
+is_num = 0 find = 1 MARTINEZ comp to BROWN 
+Successfully deal with didx = 31
+is_num = 0 find = 1 MOORE comp to BROWN 
+Successfully deal with didx = 32
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 33
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 34
+is_num = 0 find = 1 WILSON comp to BROWN 
+Successfully deal with didx = 35
+is_num = 0 find = 1 MOORE comp to BROWN 
+Successfully deal with didx = 36
+is_num = 0 find = 1 THOMPSON comp to BROWN 
+Successfully deal with didx = 37
+is_num = 0 find = 1 JOHNSON comp to BROWN 
+Successfully deal with didx = 38
+is_num = 0 find = 1 THOMAS comp to BROWN 
+Successfully deal with didx = 39
+is_num = 0 find = 1 ANDERSON comp to BROWN 
+Successfully deal with didx = 40
+is_num = 0 find = 1 MOORE comp to BROWN 
+Successfully deal with didx = 41
+is_num = 0 find = 1 SMITH comp to BROWN 
+Successfully deal with didx = 42
+is_num = 0 find = 1 THOMPSON comp to BROWN 
+Successfully deal with didx = 43
+is_num = 0 find = 1 JACKSON comp to BROWN 
+Successfully deal with didx = 44
+is_num = 0 find = 1 THOMPSON comp to BROWN 
+Successfully deal with didx = 45
+is_num = 0 find = 1 JOHNSON comp to BROWN 
+Successfully deal with didx = 46
+is_num = 0 find = 1 BROWN comp to BROWN 
+Successfully deal with didx = 47
+is_num = 0 find = 1 WHITE comp to BROWN 
+Successfully deal with didx = 48
+is_num = 0 find = 1 JONES comp to BROWN 
+Successfully deal with didx = 49
+age firstname age ID age age firstname == ELIZABETH 
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 0
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 1
+is_num = 0 find = 0 PATRICIA comp to ELIZABETH 
+Successfully deal with didx = 2
+is_num = 0 find = 0 LINDA comp to ELIZABETH 
+Successfully deal with didx = 3
+is_num = 0 find = 0 PATRICIA comp to ELIZABETH 
+Successfully deal with didx = 4
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 5
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 6
+is_num = 0 find = 0 LINDA comp to ELIZABETH 
+Successfully deal with didx = 7
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 8
+is_num = 0 find = 0 MARIA comp to ELIZABETH 
+Successfully deal with didx = 9
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 10
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 11
+is_num = 0 find = 0 MARIA comp to ELIZABETH 
+Successfully deal with didx = 12
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 13
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 14
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 15
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 16
+is_num = 0 find = 0 MARIA comp to ELIZABETH 
+Successfully deal with didx = 17
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 18
+is_num = 0 find = 0 MARGARET comp to ELIZABETH 
+Successfully deal with didx = 19
+is_num = 0 find = 0 MARGARET comp to ELIZABETH 
+Successfully deal with didx = 20
+is_num = 0 find = 0 LINDA comp to ELIZABETH 
+Successfully deal with didx = 21
+is_num = 0 find = 0 JENNIFER comp to ELIZABETH 
+Successfully deal with didx = 22
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 23
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 24
+is_num = 0 find = 0 LINDA comp to ELIZABETH 
+Successfully deal with didx = 25
+is_num = 0 find = 0 MARGARET comp to ELIZABETH 
+Successfully deal with didx = 26
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 27
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 28
+is_num = 0 find = 0 PATRICIA comp to ELIZABETH 
+Successfully deal with didx = 29
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 30
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 31
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 32
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 33
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 34
+is_num = 0 find = 0 MARIA comp to ELIZABETH 
+Successfully deal with didx = 35
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 36
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 37
+is_num = 0 find = 0 MARIA comp to ELIZABETH 
+Successfully deal with didx = 38
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 39
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 40
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 41
+is_num = 0 find = 0 SUSAN comp to ELIZABETH 
+Successfully deal with didx = 42
+is_num = 0 find = 0 MARY comp to ELIZABETH 
+Successfully deal with didx = 43
+is_num = 0 find = 0 BARBARA comp to ELIZABETH 
+Successfully deal with didx = 44
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 45
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 46
+is_num = 0 find = 0 DOROTHY comp to ELIZABETH 
+Successfully deal with didx = 47
+is_num = 0 find = 0 LINDA comp to ELIZABETH 
+Successfully deal with didx = 48
+is_num = 0 find = 0 ELIZABETH comp to ELIZABETH 
+Successfully deal with didx = 49
+age lastname salary ID age lastname ID != 71CLG2BFBG 
+is_num = 1 find = 3 2TNC5C73D8 comp to 71CLG2BFBG 
