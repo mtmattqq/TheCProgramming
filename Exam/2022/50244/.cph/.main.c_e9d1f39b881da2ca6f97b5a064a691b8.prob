@@ -1,0 +1,1 @@
+{"name":"Local: main","url":"/home/matt/Programming/TheCProgramming/Exam/2022/50244/main.c","tests":[{"id":1700019645438,"input":"3\n7297\n768 613\n6865 8179\n768 768 293\n768 768 7482\n4448 2400 6819","output":"768 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/matt/Programming/TheCProgramming/Exam/2022/50244/main.c","group":"local","local":true}
