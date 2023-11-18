@@ -11,15 +11,6 @@ int count_bit(uint32_t a, int size) {
     return ret;
 }
 
-#ifdef DEBUG
-int print_binary(uint32_t a, int size) {
-    for(int i = size - 1; i >= 0; --i) {
-        printf("%u", (a & (1U << i)) >> i);
-    }
-    printf("\n");
-}
-#endif
-
 uint32_t find_ans(uint32_t n, int size) {
     if(size == 1) {
         return n;
