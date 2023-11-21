@@ -10,6 +10,9 @@
         "*.tcc": "c",
         "string": "c",
         "unordered_map": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "stdbool.h": "c",
+        "matrixoperations.h": "c",
+        "compare": "c"
     }
 }
