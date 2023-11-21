@@ -8,24 +8,10 @@ bool get(uint64_t a, int r, int c) {
 }
 
 bool set(uint64_t *a, int r, int c) {
-
-// #ifdef DEBUG
-//     uint64_t tp = (1ULL << (r * 8 + c));
-//     printf("The matrix for modifying r = %d, c = %d\n", r, c);
-//     printMatrix(&tp);
-// #endif
-
     (*a) |= (1ULL << (r * 8 + c));
 }
 
 bool reset(uint64_t *a, int r, int c) {
-
-// #ifdef DEBUG
-//     uint64_t tp = (INT64_MAX ^ (1ULL << (r * 8 + c))) ^ (1ULL << 63);
-//     printf("The matrix for modifying r = %d, c = %d\n", r, c);
-//     printMatrix(&tp);
-// #endif
-
     (*a) &= (INT64_MAX ^ (1ULL << (r * 8 + c))) ^ (1ULL << 63);
 }
 
@@ -60,11 +46,6 @@ void rotateMatrix(uint64_t *matrix) {
             modify(matrix, i, j, get(tp, i, j));
         }
     }
-
-#ifdef DEBUG
-    printMatrix(matrix);
-#endif
-
 }
 
 void transposeMatrix(uint64_t *matrix) {
@@ -81,27 +62,4 @@ void transposeMatrix(uint64_t *matrix) {
             modify(matrix, i, j, get(tp, i, j));
         }
     }
-
-#ifdef DEBUG
-    printMatrix(matrix);
-#endif
-
 }
-
-#ifdef DEBUG
-void test() {
-    uint64_t matrix = 2378463553207140481;
-    
-    printMatrix(&matrix);
-
-    printf("\n");
-
-    rotateMatrix(&matrix);
-    printMatrix(&matrix);
-
-    printf("\n");
-
-    transposeMatrix(&matrix);
-    printMatrix(&matrix);
-}
-#endif
