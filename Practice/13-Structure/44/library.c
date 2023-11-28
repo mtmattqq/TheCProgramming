@@ -37,7 +37,18 @@ int count_day_from_jone(struct Date date, int day_per_month[]) {
     return day;
 }
 
+#ifdef DEBUG
+void test() {
+    count_fine_per_day(33U);
+}
+#endif
+
 unsigned int library_fine(struct Book book, struct Date date_borrowed, struct Date date_returned) {
+
+#ifdef DEBUG
+    test();
+#endif
+
     int fine_per_day = count_fine_per_day(book.importance);
 
 #ifdef DEBUG
@@ -55,5 +66,15 @@ unsigned int library_fine(struct Book book, struct Date date_borrowed, struct Da
         date_borrowed.year++;
     }
 
-    return (ret + (dr - db)) * fine_per_day;
+    ret += dr - db + 1;
+    
+#ifdef DEBUG
+    printf("Diatance : %d\n", ret);
+#endif
+
+    const int deduction[] = {90, 10, 100, 5};
+    ret -= deduction[book.type];
+
+    if(ret <= 0) return 0;
+    return ret * fine_per_day;
 }
