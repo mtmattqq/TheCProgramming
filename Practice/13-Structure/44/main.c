@@ -10,15 +10,10 @@ int main(){
         COMICS,
         "978-159-116-400-5",
         "Yoshiyuki Sadamoto",
-        17
+        17U
     };
-    struct Date date_borrowed, date_returned;
-    date_borrowed.year  = 2007;
-    date_borrowed.month = 11;
-    date_borrowed.day   = 14;
-    date_returned.year  = 2007;
-    date_returned.month = 12;
-    date_returned.day   = 3;
+    struct Date date_borrowed = {2007, 11, 14}, 
+        date_returned = {2007, 12, 3};
     printf("The fine is $%d.\n", library_fine(book, date_borrowed, date_returned));
     return 0;
 }
